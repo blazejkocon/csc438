@@ -1,0 +1,8 @@
+[2016-04-28 22:48:58] START
+[2016-04-28 22:49:23] EDIT ip2country/controllers/default.py: 27
+[2016-04-28 22:49:34] CREATE db_iptable.py: 0
+[2016-04-28 22:50:07] CREATE db_countrytable.py: 0
+[2016-04-28 22:50:20] EDIT ip2country/models/db_iptable.py: 3
+[2016-04-28 22:50:34] EDIT ip2country/models/db_countrytable.py: 8
+[2016-04-28 22:51:45] CREATE default/mycountryform.html: 0
+[2016-04-28 22:51:55] EDIT ip2country/views/default/mycountryform.html: 1
