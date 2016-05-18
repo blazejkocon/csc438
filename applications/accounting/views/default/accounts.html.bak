@@ -1,0 +1,12 @@
+{{extend 'layout.html'}}
+
+<table id="accounts">
+<th> Name</th>
+<th> Balance </th>
+{{for row in rows:}}
+<tr> 
+<td>{{=row.name}} </td>
+<td>{{=row.balance}} </td>
+</tr>
+{{pass}}
+</table>

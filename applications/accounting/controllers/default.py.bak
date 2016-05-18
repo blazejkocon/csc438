@@ -8,11 +8,16 @@
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
 def accounts():
-    return 1
+    rows = db(db.account.id > 0).select()
+    return dict(rows=rows)
 
 
 def create_transaction():
-    return 1
+    form = SQLFORM(db.transfer)
+    if form.process().accepted:
+        session.flash = 'form accepted'
+        redirect(URL('index'))
+    return dict(form = form)
 
 def create_account():
     form = SQLFORM(db.account)

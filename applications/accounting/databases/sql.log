@@ -53,28 +53,18 @@ CREATE TABLE auth_cas(
     renew CHAR(1)
 );
 success!
-timestamp: 2016-05-13T18:57:50.756551
+timestamp: 2016-05-18T04:51:33.697955
 CREATE TABLE account(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name CHAR(512),
-    balance INTEGER
+    balance DOUBLE
 );
 success!
-timestamp: 2016-05-15T21:03:11.365234
+timestamp: 2016-05-18T04:52:03.457321
 CREATE TABLE transfer(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     tranfser_date TIMESTAMP,
-    amount INTEGER,
-    description CHAR(512),
-    account_from CHAR(512),
-    account_to CHAR(512)
-);
-success!
-timestamp: 2016-05-18T04:28:41.656884
-CREATE TABLE moneytransfer(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    tranfser_date TIMESTAMP,
-    amount INTEGER,
+    amount DOUBLE,
     description CHAR(512),
     account_from CHAR(512),
     account_to CHAR(512)

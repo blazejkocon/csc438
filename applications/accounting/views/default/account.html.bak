@@ -1,0 +1,12 @@
+{{extend 'layout.html'}}
+
+<table id="accounts">
+<th> {{T("")}} </th>
+<th> {{T("")}} </th>
+{{for row in rows:}}
+<tr> 
+<td>{{row.title}} </td>
+<td>{{row.location}} </td>
+</tr>
+{{pass}}
+</table>

@@ -8,7 +8,8 @@
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
 def accounts():
-    return 1
+    rows = db(db.account.id > 0).select()
+    return dict(rows=rows)
 
 
 def create_transaction():
