@@ -18,3 +18,10 @@
 [2016-05-15 22:23:27] EDIT accounting/controllers/default.py: 4
 [2016-05-15 22:23:58] CREATE default/create_transaction.html: 0
 [2016-05-15 22:24:10] EDIT accounting/views/default/create_transaction.html: -1
+[2016-05-18 04:28:16] CREATE db_transfer.py: 0
+[2016-05-18 04:28:27] EDIT accounting/models/db_transfer.py: 6
+[2016-05-18 04:28:37] EDIT accounting/models/db_transfer.py: 0
+[2016-05-18 04:28:48] DELETE accounting/models/db_transfer.py: -6
+[2016-05-18 04:29:11] CREATE db_transfer.py: 0
+[2016-05-18 04:29:53] EDIT accounting/models/db_transfer.py: 6
+[2016-05-18 04:30:22] EDIT accounting/models/db_transfer.py: 0

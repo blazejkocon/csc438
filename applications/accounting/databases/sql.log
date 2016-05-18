@@ -70,3 +70,13 @@ CREATE TABLE transfer(
     account_to CHAR(512)
 );
 success!
+timestamp: 2016-05-18T04:28:41.656884
+CREATE TABLE moneytransfer(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tranfser_date TIMESTAMP,
+    amount INTEGER,
+    description CHAR(512),
+    account_from CHAR(512),
+    account_to CHAR(512)
+);
+success!
