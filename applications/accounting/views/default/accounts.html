@@ -1,12 +1,20 @@
 {{extend 'layout.html'}}
 
 <table id="accounts">
-<th> Name</th>
-<th> Balance </th>
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th> Name</th>
+        <th> Balance </th>
+        </tr>
+    </thead>
+    <tbody>
 {{for row in rows:}}
 <tr> 
+<td>{{=row.id}} </td>
 <td>{{=row.name}} </td>
 <td>{{=row.balance}} </td>
 </tr>
 {{pass}}
+    </tbody>
 </table>

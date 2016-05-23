@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 db.define_table('transfer',
-                Field('tranfser_date',type="datetime", requires=IS_NOT_EMPTY()),
+                Field('transferdate',type="datetime"),
                 Field('amount',type ="float", requires= IS_NOT_EMPTY()),
                 Field('description',type="string", requires=IS_NOT_EMPTY()),
-                Field('account_from',type="string", requires=IS_NOT_EMPTY()),
-                Field('account_to',type="string", requires=IS_NOT_EMPTY()))
+                Field('from_acc',type="string", requires=IS_NOT_EMPTY()),
+                Field('to_acc',type="string", requires=IS_NOT_EMPTY()))

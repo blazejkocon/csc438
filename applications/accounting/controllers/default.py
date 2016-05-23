@@ -7,6 +7,13 @@
 # - user is required for authentication and authorization
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
+def account():
+    if request.args:
+        acc_id = request.args[0]
+        rows = db((db.transfer.from_acc == acc_id) | (db.transfer.to_acc == acc_id)).select()
+        return dict(rows = rows,acc_id=acc_id)
+    
+    
 def accounts():
     rows = db(db.account.id > 0).select()
     return dict(rows=rows)
@@ -15,15 +22,23 @@ def accounts():
 def create_transaction():
     form = SQLFORM(db.transfer)
     if form.process().accepted:
+        amount = int(request.vars.amount)
+        account_to = db(db.account.id == request.vars.to_acc).select().first()
+        account_from = db(db.account.id == request.vars.from_acc).select().first()
+        account_to.balance =  account_to.balance + amount
+        account_from.balance =  account_from.balance - amount
+        account_to.update_record()
+        account_from.update_record()
         session.flash = 'form accepted'
-        redirect(URL('index'))
-    return dict(form = form)
+        redirect(URL())
+    return dict(form=form)
 
 def create_account():
     form = SQLFORM(db.account)
     if form.process().accepted:
         session.flash = 'form accepted'
-        redirect(URL('index'))
+        redirect(URL('accounts'))
+
     return dict(form = form)
 
 def index():

@@ -1,1 +1,3 @@
 {{extend 'layout.html'}}
+<h1>This is the default/create_account.html template</h1>
+{{=BEAUTIFY(response._vars)}}
